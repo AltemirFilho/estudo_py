@@ -8,12 +8,12 @@
 
 # Criamos aqui um lista, vale observar que usamos [] ou invés de ().
 metas_de_carreira = ['Aprender python', 'Dominar a linguagem', 'Criar um repositório que ajude outros', 'Aprender a aplicar python na IA']
-print([metas_de_carreira]) # Colocamos dentro dos colchetes para que o python entenda que queremod imprimir a lista
+print(metas_de_carreira) # Colocamos dentro dos colchetes para que o python entenda que queremod imprimir a lista
 
 
 # Agora vamos entender como "printar" a lista da maneira que quisermos
 print(metas_de_carreira[0]) # adicionamos após o nome da lista o indice exato que queremos printar, aqui no caso o [0]
-print(metas_de_carreira[1:3]) # assim definimos um intervalo que queremos ver a nossa lista, excluindo os pontos que colocamos e printando apenasd o que há entre eles
+print(metas_de_carreira[1:3]) # assim definimos um intervalo que queremos ver a nossa lista, excluindo o ponto final que colocamos e printando apenasd o que há entre eles
 print(metas_de_carreira[:2])   # assim definimos apenas um ponto de parada, excluindo esse poonto do ptint e inicianso do começo da lista 
 print(metas_de_carreira[1:]) # asssim definimos um ponto de partida do print que mostrará dali até o fim da lista
 
@@ -37,7 +37,7 @@ print(metas_de_carreira) # Observe que agora o novo item se encontra na posiçã
 
 # Vamos criar mais uma lista para o proximo exemplo
 metas_futuras = ["Dar aula de programação", "Conseguir uma bolsa CNPQ",]
-metas_de_carreira.extend(metas_futuras) # Aqui adicionamos uma lista na lista escolhida com (.insert)
+metas_de_carreira.extend(metas_futuras) # Aqui adicionamos uma lista na lista escolhida com (.extend())
 print(metas_de_carreira)
 
 # Agora vamos ver como remover itens da lista
@@ -45,7 +45,7 @@ metas_de_carreira.remove("Dar aula de programação") # Aqui nós tiramos umm it
 print(metas_de_carreira)
 del metas_de_carreira[4] # Aqui nós estamos deletando um arquivo específico baseado no índice
 print(metas_de_carreira) 
-metas_de_carreira.pop(5) # Aqui nós tambem deletamos um arquivo específico com base no índice tambem
+metas_de_carreira.pop(5) # Aqui nós tambem deletamos um arquivo específico com base no índice tambem, porem devolve o item excluido 
 print(metas_de_carreira)
 
 # Vamos agora aprender a organizar e ordenar as listas
@@ -57,6 +57,8 @@ lista_numeros.sort(reverse=True) # aqui agora vamos deixar a lista em ordem decr
 print(lista_numeros)
 lista_numeros.reverse() # Aqui com o (.reverse()) nós invertemos a ordem dos itens da lista selecionada
 print(lista_numeros) # Como a lista anteriormente foi colocda em ordem decrescente veja que agora alista esta em ordem crescente
+metas_ordenadas = sorted(metas_de_carreira) # Aqui nós criamos uma nova lista onde teremos os elementeos da lista seleciona organizadas em maneira crescente sem alterar a lista original
+print(metas_ordenadas)
 
 # Vamos agora ver alguns outros comandos
 print(len(metas_de_carreira)) # Aqui nós vemos com o comando (len()) a quantidade de itens presente na lista escolhida 
