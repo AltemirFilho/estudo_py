@@ -5,4 +5,7 @@
 
 
 # Vamos criar uma lista parra o primeiro exemplo:
-lista =  ['Python', 'Sql', 'Java', 'HTML', ]
+lista =  ['Python', 'SQL', 'Java', 'HTML', 'CSS']
+
+for linguagem in lista: # A palavra "linguagem" é 
+    print(linguagem)
