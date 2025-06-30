@@ -59,3 +59,14 @@ quadrados = [i**2 for i in range(6)] # Nesse nos definimos uma variável elevada
 print(f"Aqui estão os números de 0 a 5 elevados ao quadrado: {quadrados}")
 
 # Agora vamos entender como quebramos um loop antes mesmo dele ser concluído
+for i in range(4500):
+    if i > 3: # Aqui nos definimos um condicional parq qunao i passe de número 3
+        break # E aqui definimos a consequência, que seria esssa a quebra do loop
+    print(i)
+
+# Agora vamos entender como fazer com que uma função não acontece durante o loop
+Idades = [14,45,22,12,16,36,12,17,18] 
+for idade in Idades:
+    if idade < 18:
+        continue # perceba que como a condição (continue) esta ligada ao (if) quando a condição é atendida ele pula ela no loop
+    print(idade) # Fazendo assim que apenas a idade que n atenda a condição (if) entre no loop
