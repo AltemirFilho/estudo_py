@@ -7,5 +7,5 @@
 # Vamos criar uma lista parra o primeiro exemplo:
 lista =  ['Python', 'SQL', 'Java', 'HTML', 'CSS']
 
-for linguagem in lista: # A palavra "linguagem" é 
+for linguagem in lista: # A palavra "linguagem" é apenas uma variável temporaria que define cada passada por cada item da coleção 
     print(linguagem)
