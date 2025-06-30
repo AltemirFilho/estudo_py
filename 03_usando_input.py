@@ -4,7 +4,7 @@
 nome = input("Qual o seu nome? ") # Aqui nomeamos que a variável será preenchida pelo usuário
 
 
-print(f"Seja bem-vindo, {nome} !") # ((f"_")) f string ns permite printar texto e de variáveis dentreo, estando essas entre chaves  {}
+print(f"Seja bem-vindo, {nome} !") # ((f"_")) f string ns permite printar texto e variáveis dentro, estando essas entre chaves  {}
 
 
 trabalho = input("Qual sua profissão? ")
