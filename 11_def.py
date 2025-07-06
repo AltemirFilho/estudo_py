@@ -39,6 +39,11 @@ def ver_tarefas():
 def sair_do_programa():
     print("Obrigado por usar a Lista de Tarefas. Até mais!")
 
+
+# Perceba que aqui acima nós definimos cada função que queremos que o menu tenha e o colocamos em um bloco de função (def)
+# Fazendo isso nós temos o poder de "chamar" esses blocos posteriormente sem precisar codar, isso porque todos ja estão codadaos nos blocos acima
+
+
 while True:
     print("\n--- Menu de Tarefas ---")
     print("1. Adicionar Tarefa")
@@ -62,3 +67,6 @@ while True:
 
     else:
         print("Opção inválida. Por favor, escolha um número de 1 a 4.")
+
+
+# Perceba como isso deixa o ´codigo mais limpo e facil de ser lido, deixando inclusive maiois fácil sua correção  caso haja um erro
