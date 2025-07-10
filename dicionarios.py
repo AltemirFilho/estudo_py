@@ -49,3 +49,42 @@ print("profissão" in info_usuario)  # Saída: False
 
 # Verificando se um valor existe
 print("Altemir" in info_usuario.values())  # Saída: True
+
+# Verificando com if
+if "idade" in info_usuario:
+    print(f"A idade do usuário é: {info_usuario['idade']}")  # Saída: A idade do usuário é: 24  
+else:
+    print("A chave 'idade' não existe no dicionário.") # Saída: A chave 'idade' não existe no dicionário.
+
+# Podemos adicionar novos itens ao dicionário
+info_usuario["profissão"] = "Desenvolvedor"  # Adicionando uma nova chave-valor
+print(info_usuario)  # Saída: {'nome': 'Altemir', 'idade': 24, 'sexo': 'Masculino', 'estado civil': 'casado', 'interesses': ['programação', 'jogos de computador', 'cinema'], 'faz faculdade': True, 'profissão': 'Desenvolvedor'}
+
+# Podemos atualizar valores existentes
+info_usuario["idade"] = 25  # Atualizando o valor da chave 'idade', saída: {'nome': 'Altemir', 'idade': 25, 'sexo': 'Masculino', 'estado civil': 'casado', 'interesses': ['programação', 'jogos de computador', 'cinema'], 'faz faculdade': True, 'profissão': 'Desenvolvedor'}
+
+# Podemos remover itens do dicionário usando o método pop()
+info_usuario.pop("sexo")  # Remove a chave 'sexo' e retorna seu valor
+print(info_usuario)  # Saída: {'nome': 'Altemir', 'idade': 25, 'estado civil': 'casado', 'interesses': ['programação', 'jogos de computador', 'cinema'], 'faz faculdade': True, 'profissão': 'Desenvolvedor'}
+
+# Podemos remover um item usando o método del
+del info_usuario["estado civil"]  # Remove a chave 'estado civil'
+print(info_usuario)  # Saída: {'nome': 'Altemir', 'idade': 25, 'interesses': ['programação', 'jogos de computador', 'cinema'], 'faz faculdade': True, 'profissão': 'Desenvolvedor'}
+
+# Podemos limpar todo o dicionário usando o método clear()
+info_usuario.clear()  # Limpa todos os itens do dicionário 
+print(info_usuario)  # Saída: {} (dicionário vazio)
+
+# Temos o metodo setdefault() que retorna o valor da chave se existir, ou define um valor padrão se não existir
+info_usuario = {
+    "nome": "Altemir",
+    "idade": 24,
+    "sexo": "Masculino"
+}
+# Usando setdefault para obter o valor da chave 'profissão' ou definir um valor padrão
+profissao = info_usuario.setdefault("profissão", "Desenvolvedor")
+print(profissao)  # Saída: Desenvolvedor (valor padrão definido) 
+
+# Verificando o dicionário após o uso de setdefault
+print(info_usuario)  # Saída: {'nome': 'Altemir', 'idade': 24, 'sexo': 'Masculino', 'profissão': 'Desenvolvedor'}
+
