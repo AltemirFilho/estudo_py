@@ -94,3 +94,13 @@ print(profissao)  # Saída: Desenvolvedor (valor existente retornado)
 print(info_usuario)  # Saída: {'nome': 'Altemir', 'idade': 24, 'sexo': 'Masculino', 'profissão': 'Desenvolvedor'}
 
 # Podemos usar o método update() para atualizar várias chaves de uma vez
+info_usuario.update({
+    "cidade": "São Paulo",
+    "estado": "SP"
+})  # Atualizando várias chaves de uma vez 
+print(info_usuario)  # Saída: {'nome': 'Altemir', 'idade': 24, 'sexo': 'Masculino', 'profissão': 'Desenvolvedor', 'cidade': 'São Paulo', 'estado': 'SP'}
+
+# Podemos usar o método copy() para criar uma cópia do dicionário
+info_usuario_copia = info_usuario.copy()  # Criando uma cópia do dicionário
+print(info_usuario_copia)  # Saída: {'nome': 'Altemir', 'idade': 24, 'sexo': 'Masculino', 'profissão': 'Desenvolvedor', 'cidade': 'São Paulo', 'estado': 'SP'}
+
