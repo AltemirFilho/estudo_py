@@ -236,4 +236,204 @@ def exibir_produtos_precos():
         print("Nenhum produto encontrado.")  # Mensagem se o dicionário estiver vazio
 # Vamos testar a função de exibição de produtos e preços
 exibir_produtos_precos()  # Exibe todos os produtos e seus preços
+# Fim do código de exibição de produtos e preços
 
+# Vamos explorar mais algumas operações avançadas com dicionários
+# Vamos criar um dicionário de usuários com informações adicionais
+info_usuarios = {
+    "usuario1": {
+        "nome": "Altemir",
+        "idade": 24,
+        "email": "altemir@example.com"
+    },
+    "usuario2": {
+        "nome": "Beatriz",
+        "idade": 30,
+        "email": "beatriz@example.com"
+    }
+}   
+# Podemos acessar as informações de um usuário específico
+print("Nome do usuário1:", info_usuarios["usuario1"]["nome"])  # Saída: Nome do usuário1: Altemir
+print("Idade do usuário1:", info_usuarios["usuario1"]["idade"])  # Saída: Idade do usuário1: 24
+print("Email do usuário1:", info_usuarios["usuario1"]["email"])  # Saída: Email do usuário1: altemir@example.com    
+
+# Podemos adicionar um novo usuário com informações adicionais
+info_usuarios["usuario3"] = {
+    "nome": "Carlos",
+    "idade": 28,
+    "email": "carlos@example.com"
+}   
+print("Dicionário atualizado:", info_usuarios)  # Exibe o dicionário atualizado
+
+# Podemos remover um usuário específico
+info_usuarios.pop("usuario2")  # Removendo o usuário2   
+print("Dicionário atualizado:", info_usuarios)  # Exibe o dicionário atualizado
+
+# Podemos exibir todos os usuários e suas informações
+def exibir_usuarios():
+    if info_usuarios:  # Verifica se o dicionário não está vazio
+        print("Usuários:")
+        for usuario, info in info_usuarios.items():  # Itera sobre os usuários e suas informações
+            # Exibe o usuário e suas informações
+            print(f"{usuario}:")
+            print(f" - Nome: {info['nome']}") # Usamos info para acessar as informações do usuário
+            print(f" - Idade: {info['idade']}")
+            print(f" - Email: {info['email']}")
+    else:
+        print("Nenhum usuário encontrado.")  # Mensagem se o dicionário estiver vazio
+
+# Vamos testar a função de exibição de usuários
+exibir_usuarios()  # Exibe todos os usuários e suas informações
+# Fim do código de exibição de usuários
+
+# Vamos entender como fazer o usuário interagir com o dicionário de usuários
+while True:
+    print("\nMenu:")
+    print("1. Adicionar usuário")
+    print("2. Remover usuário")
+    print("3. Exibir usuários")
+    print("4. Sair")
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        # Adicionar usuário
+        usuario = input("Digite o nome do usuário: ") # Aqui definimos a variável usuario que irá armazenar o nome do usuário
+        if usuario in info_usuarios:
+            print("Usuário já existe. Tente novamente.")
+            continue  # Aqui continuamos para a próxima iteração do loop se o usuário já existir
+        # Coletando informações adicionais do usuário
+        idade = int(input("Digite a idade do usuário: ")) 
+        email = input("Digite o email do usuário: ")
+        # Agora vamos adicionar o usuário ao dicionário
+        # Vamos basicamente colocar as informações que colocamos nas variáveis dentro do dicionário
+        # info_usuarios é o dicionário que armazena as informações dos usuários, pois queremos que as informações sejam armazenadas dentro do dicionário
+        info_usuarios[usuario] = {
+            "nome": usuario,
+            "idade": idade,
+            "email": email
+        }
+        print("Usuário adicionado com sucesso!")
+
+    elif opcao == "2":
+        # Remover usuário
+        usuario = input("Digite o nome do usuário a ser removido: ")
+        info_usuarios.pop(usuario, None) # O none é usado para evitar erro caso o usuário não exista
+        if usuario not in info_usuarios:
+            print("Usuário não encontrado.")
+            continue
+        print("Usuário removido com sucesso!")
+
+    elif opcao == "3":
+        # Exibir usuários
+        exibir_usuarios()
+
+    elif opcao == "4":
+        # Sair
+        print("Saindo...")
+        break
+
+    else:
+        print("Opção inválida. Tente novamente.")
+# Fim do código de interação com o usuário para o dicionário de usuários
+
+# Vamos explorar mais algumas operações avançadas com dicionários
+# Vamos criar um dicionário de produtos com categorias e preços
+produtos = {
+    "produto1": {
+        "nome": "Notebook",
+        "categoria": "Eletrônicos",
+        "preco": 2500.00
+    },
+    "produto2": {
+        "nome": "Smartphone",
+        "categoria": "Eletrônicos",
+        "preco": 1500.00
+    },
+    "produto3": {
+        "nome": "Camiseta",
+        "categoria": "Vestuário",
+        "preco": 79.90
+    }
+}
+
+# Podemos acessar as informações de um produto específico
+# definimos produto1 como a chave do dicionário, e dentro dele temos as informações do produto
+# Aqui mostramos ao sistema que queremos acessar o nome, categoria e preço do produto1
+print("Nome do produto1:", produtos["produto1"]["nome"])  # Saída: Notebook
+print("Categoria do produto1:", produtos["produto1"]["categoria"])  # Saída: Eletrônicos
+print("Preço do produto1:", produtos["produto1"]["preco"])  # Saída: 2500.0
+
+# Podemos adicionar um novo produto com informações adicionais
+produtos["produto4"] = {
+    "nome": "Tênis",
+    "categoria": "Vestuário",
+    "preco": 299.90
+}
+print("Dicionário atualizado:", produtos)  # Exibe o dicionário atualizado
+
+# Podemos remover um produto específico
+produtos.pop("produto2")  # Removendo o produto2
+print("Dicionário atualizado:", produtos)  # Exibe o dicionário atualizado
+
+# Podemos exibir todos os produtos e suas informações
+def exibir_produtos():
+    if produtos:  # Verifica se o dicionário não está vazio
+        print("Produtos:")
+        for produto, info in produtos.items():  # Itera sobre os produtos e suas informações
+            # Exibe o produto e suas informações
+            print(f"{produto}:")
+            print(f" - Nome: {info['nome']}")
+            print(f" - Categoria: {info['categoria']}")
+            print(f" - Preço: R$ {info['preco']:.2f}")
+    else:
+        print("Nenhum produto encontrado.")  # Mensagem se o dicionário estiver vazio
+# Vamos testar a função de exibição de produtos
+exibir_produtos()  # Exibe todos os produtos e suas informações
+# Fim do código de exibição de produtos
+
+# Vamos entender como fazer o usuário interagir com o dicionário de produtos
+while True:
+    print("\nMenu:")
+    print("1. Adicionar produto")
+    print("2. Remover produto")
+    print("3. Exibir produtos")
+    print("4. Sair")
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        # Adicionar produto
+        produto = input("Digite o nome do produto: ")
+        if produto in produtos:
+            print("Produto já existe. Tente novamente.")
+            continue  # Continua para a próxima iteração do loop se o produto já existir
+        # Coletando informações adicionais do produto
+        categoria = input("Digite a categoria do produto: ")
+        preco = float(input("Digite o preço do produto: "))
+        # Agora vamos adicionar o produto ao dicionário
+        produtos[produto] = {
+            "nome": produto,
+            "categoria": categoria,
+            "preco": preco
+        }
+        print("Produto adicionado com sucesso!")
+
+    elif opcao == "2":
+        # Remover produto
+        produto = input("Digite o nome do produto a ser removido: ")
+        produtos.pop(produto, None)  # O None é usado para evitar erro caso o produto não exista
+        if produto not in produtos:
+            print("Produto não encontrado.")
+            continue
+        print("Produto removido com sucesso!")
+
+    elif opcao == "3":
+        # Exibir produtos
+        exibir_produtos()
+
+    elif opcao == "4":
+        # Sair
+        print("Saindo...")
+        break
+
+    else:
+        print("Opção inválida. Tente novamente.")
