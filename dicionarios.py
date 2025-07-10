@@ -437,3 +437,4 @@ while True:
 
     else:
         print("Opção inválida. Tente novamente.")
+# Fim do código de interação com o usuário para o dicionário de produtos
