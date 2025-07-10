@@ -84,7 +84,13 @@ info_usuario = {
 # Usando setdefault para obter o valor da chave 'profissão' ou definir um valor padrão
 profissao = info_usuario.setdefault("profissão", "Desenvolvedor")
 print(profissao)  # Saída: Desenvolvedor (valor padrão definido) 
-
 # Verificando o dicionário após o uso de setdefault
 print(info_usuario)  # Saída: {'nome': 'Altemir', 'idade': 24, 'sexo': 'Masculino', 'profissão': 'Desenvolvedor'}
 
+# Podemos usar setdefault para definir um valor padrão para uma chave que já existe
+profissao = info_usuario.setdefault("profissão", "Analista")
+print(profissao)  # Saída: Desenvolvedor (valor existente retornado)    
+# Verificando o dicionário após o uso de setdefault
+print(info_usuario)  # Saída: {'nome': 'Altemir', 'idade': 24, 'sexo': 'Masculino', 'profissão': 'Desenvolvedor'}
+
+# Podemos usar o método update() para atualizar várias chaves de uma vez
