@@ -152,7 +152,7 @@ def exibir_todas_categorias():
     if info_produtos:  # Verifica se o dicionário não está vazio
         print("Categorias e produtos:")
         for categoria, produtos in info_produtos.items():  # Itera sobre as categorias e seus produtos
-            print(f"{categoria}: {', '.join(produtos)}")  # Exibe a categoria e os produtos separados por vírgula
+            print(f"{categoria}: {', '.join(produtos)}")  # Exibe a categoria e os produtos separados por vírgula, .join(produtos) converte a lista de produtos em uma string separada por vírgulas
     else:
         print("Nenhuma categoria encontrada.")  # Mensagem se o dicionário estiver vazio
 
