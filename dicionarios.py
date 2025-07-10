@@ -104,3 +104,136 @@ print(info_usuario)  # Saída: {'nome': 'Altemir', 'idade': 24, 'sexo': 'Masculi
 info_usuario_copia = info_usuario.copy()  # Criando uma cópia do dicionário
 print(info_usuario_copia)  # Saída: {'nome': 'Altemir', 'idade': 24, 'sexo': 'Masculino', 'profissão': 'Desenvolvedor', 'cidade': 'São Paulo', 'estado': 'SP'}
 
+# Vamos explorar mais algumas operações avançadas com dicionários
+# vamos criar um dicionario onde cada chve cotem uma lista de valores e vamos adicionar valores a essa lista
+info_produtos = {
+    "frutas": ["maçã", "banana", "laranja"],
+    "legumes": ["cenoura", "batata", "brócolis"],
+    "carnes": ["frango", "bife", "peixe"]
+}  
+# Podemos adicionar um novo item à lista de frutas
+info_produtos["frutas"].append("uva")
+print(info_produtos)  # Saída: {'frutas': ['maçã', 'banana', 'laranja', 'uva'], 'legumes': ['cenoura', 'batata', 'brócolis'], 'carnes': ['frango', 'bife', 'peixe']}
+
+# Podemos adicionar um novo item à lista de legumes
+info_produtos["legumes"].append("abobrinha")
+print(info_produtos)  # Saída: {'frutas': ['maçã', 'banana', 'laranja', 'uva'], 'legumes': ['cenoura', 'batata', 'brócolis', 'abobrinha'], 'carnes': ['frango', 'bife', 'peixe']}   
+
+# vamos entrender agora como podemos fazer o usuarío interagir com o dicionário
+# Vamos criar uma função para adicionar um novo produto ao dicionário
+def adicionar_produto(categoria, produto): # A função recebe a categoria e o produto a ser adicionado, essas são variáveis que o usuário irá informar
+    if categoria in info_produtos: # Verifica se a categoria já existe no dicionário
+        info_produtos[categoria].append(produto) # Se existir, adiciona o produto à lista da categoria
+    else:
+        info_produtos[categoria] = [produto] # Se não existir, cria uma nova lista com o produto
+    print(f"Produto '{produto}' adicionado à categoria '{categoria}'.") 
+    print("Dicionário atualizado:", info_produtos)  # Exibe o dicionário atualizado
+
+# Vamos criar uma função para remover um produto de uma categoria
+def remover_produto(categoria, produto):       
+    if categoria in info_produtos and produto in info_produtos[categoria]: # Verifica se a categoria e o produto existem
+        info_produtos[categoria].remove(produto) # Remove o produto da lista da categoria
+        print(f"Produto '{produto}' removido da categoria '{categoria}'.")
+    else:
+        print(f"Produto '{produto}' não encontrado na categoria '{categoria}'.") # Mensagem de erro se o produto não existir
+    print("Dicionário atualizado:", info_produtos)  # Exibe o dicionário atualizado 
+
+# Vamos criar uma função para exibir os produtos de uma categoria
+def exibir_produtos(categoria):
+    if categoria in info_produtos: # Verifica se a categoria existe no dicionário
+        print(f"Produtos na categoria '{categoria}':") 
+        for produto in info_produtos[categoria]: # Itera sobre os produtos da categoria 
+            print(f" - {produto}")
+    else:
+        print(f"Categoria '{categoria}' não encontrada.") # Mensagem de erro se a categoria não existir
+
+# Vamos criar uma função para exibir todas as categorias e seus produtos
+def exibir_todas_categorias():
+    if info_produtos:  # Verifica se o dicionário não está vazio
+        print("Categorias e produtos:")
+        for categoria, produtos in info_produtos.items():  # Itera sobre as categorias e seus produtos
+            print(f"{categoria}: {', '.join(produtos)}")  # Exibe a categoria e os produtos separados por vírgula
+    else:
+        print("Nenhuma categoria encontrada.")  # Mensagem se o dicionário estiver vazio
+
+# Vamos testar as funções criadas
+adicionar_produto("frutas", "kiwi")  # Adiciona kiwi à categoria frutas
+adicionar_produto("laticínios", "leite")  # Adiciona leite à nova categoria laticínios
+remover_produto("frutas", "banana")  # Remove banana da categoria frutas            
+exibir_produtos("frutas")  # Exibe os produtos da categoria frutas
+exibir_produtos("laticínios")  # Exibe os produtos da categoria l
+
+# Vamos fazer uma interação com o usuário para adicionar, remover e exibir produtos
+while True:
+    print("\nEscolha uma opção:")
+    print("1. Adicionar produto")
+    print("2. Remover produto")
+    print("3. Exibir produtos de uma categoria")
+    print("4. Exibir todas as categorias e produtos")
+    print("5. Sair")
+
+    opcao = input("Opção: ")
+
+    if opcao == "1":
+        categoria = input("Informe a categoria: ")
+        produto = input("Informe o produto: ")
+        adicionar_produto(categoria, produto)
+    elif opcao == "2":
+        categoria = input("Informe a categoria: ")
+        produto = input("Informe o produto: ")
+        remover_produto(categoria, produto)
+    elif opcao == "3":
+        categoria = input("Informe a categoria: ")
+        exibir_produtos(categoria)
+    elif opcao == "4":
+        exibir_todas_categorias()
+    elif opcao == "5":
+        print("Saindo...")
+        break
+    else:
+        print("Opção inválida. Tente novamente.")
+# Fim do código de interação com o usuário
+
+# Vamos explorar mais algumas operações avançadas com dicionários
+# Vamos criar um dicionário de produtos com preços
+info_produtos_precos = {
+    "frutas": {
+        "banana": 1.50,
+        "maçã": 2.00,
+        "kiwi": 3.00
+    },
+    "laticínios": {
+        "leite": 4.00,
+        "queijo": 5.00
+    }
+}
+# Veja que acima criamos um dicionário onde cada chave contém outro dicionário, isso é conhecido como dicionário aninhado
+# Podemos acessar os preços dos produtos usando chaves aninhadas
+print("Preço da banana:", info_produtos_precos["frutas"]["banana"])
+print("Preço do leite:", info_produtos_precos["laticínios"]["leite"])
+# Saída:
+# Preço da banana: 1.5
+# Preço do leite: 4.0   
+
+# Podemos adicionar um novo produto com preço
+info_produtos_precos["frutas"]["laranja"] = 2.50  # Adicionando laranja à categoria frutas com preço
+print("Dicionário atualizado:", info_produtos_precos)  # Exibe o dicionário atualizado
+
+# Podemos remover um produto com preço
+info_produtos_precos["laticínios"].pop("queijo")  # Removendo queijo da categoria laticínios
+print("Dicionário atualizado:", info_produtos_precos)  # Exibe o dicionário atualizado  
+
+# Podemos exibir todos os produtos e seus preços
+def exibir_produtos_precos():
+    if info_produtos_precos:  # Verifica se o dicionário não está vazio
+        print("Produtos e preços:")
+        for categoria, produtos in info_produtos_precos.items():  # Itera sobre as categorias e seus produtos, items é o conjunto de chaves e valores
+            # Exibe a categoria e os produtos com seus preços
+            print(f"{categoria}:")
+            for produto, preco in produtos.items():  # Itera sobre os produtos e seus preços
+                print(f" - {produto}: R$ {preco:.2f}")  # Exibe o produto e seu preço formatado
+    else:
+        print("Nenhum produto encontrado.")  # Mensagem se o dicionário estiver vazio
+# Vamos testar a função de exibição de produtos e preços
+exibir_produtos_precos()  # Exibe todos os produtos e seus preços
+
