@@ -317,11 +317,11 @@ while True:
     elif opcao == "2":
         # Remover usuário
         usuario = input("Digite o nome do usuário a ser removido: ")
-        info_usuarios.pop(usuario, None) # O none é usado para evitar erro caso o usuário não exista
-        if usuario not in info_usuarios:
-            print("Usuário não encontrado.")
-            continue
-        print("Usuário removido com sucesso!")
+        usuario_removido = info_usuarios.pop(usuario, None) # O none é usado para evitar erro caso o usuário não exista
+        if usuario_removido is not None:
+            print("Usuário removido com sucesso!")
+        else:
+            print("Usuário não encontrado.")      
 
     elif opcao == "3":
         # Exibir usuários
