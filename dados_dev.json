@@ -21,5 +21,17 @@
             "ano_inicio": 2019,
             "ano_fim": 2021
         }
-    }
+    },
+    "projetos": [
+        {
+            "nome": "Projeto A",
+            "descricao": "Descrição do Projeto A",
+            "ano": 2020
+        },
+        {
+            "nome": "Projeto B",
+            "descricao": "Descrição do Projeto B",
+            "ano": 2021
+        }
+    ]
 }
