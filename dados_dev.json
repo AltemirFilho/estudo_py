@@ -1,0 +1,25 @@
+{
+    "nome": "Altemir",
+    "idade": 24,
+    "cidade": "Aracaju",
+    "profissao": "Programador",
+    "habilidades": [
+        "Python",
+        "JavaScript",
+        "SQL"
+    ],
+    "experiencia": {
+        "empresa1": {
+            "nome": "Empresa A",
+            "cargo": "Desenvolvedor",
+            "ano_inicio": 2015,
+            "ano_fim": 2018
+        },
+        "empresa2": {
+            "nome": "Empresa B",
+            "cargo": "Analista",
+            "ano_inicio": 2019,
+            "ano_fim": 2021
+        }
+    }
+}
