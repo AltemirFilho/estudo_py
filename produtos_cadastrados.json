@@ -1,0 +1,82 @@
+{
+    "bolas_tennis": [
+        {
+            "marca": "Wilson",
+            "preco": 20.0,
+            "quantidade": 40,
+            "descricao": "Bola de t\u00eanis Wilson US Open, ideal para jogos profissionais."
+        },
+        {
+            "marca": "Head",
+            "preco": 22.5,
+            "quantidade": 30,
+            "descricao": "Bola de t\u00eanis Head Tour, excelente para treinos e competi\u00e7\u00f5es."
+        },
+        {
+            "marca": "Babolat",
+            "preco": 25.0,
+            "quantidade": 20,
+            "descricao": "Bola de t\u00eanis Babolat Pure Drive, para jogadores exigentes."
+        }
+    ],
+    "raquetes_tennis": [
+        {
+            "marca": "Wilson",
+            "preco": 1500.0,
+            "quantidade": 15,
+            "descricao": "Raquete de t\u00eanis Wilson Blade, ideal para controle e precis\u00e3o."
+        },
+        {
+            "marca": "Head",
+            "preco": 1600.0,
+            "quantidade": 10,
+            "descricao": "Raquete de t\u00eanis Head Graphene 360, para jogadores avan\u00e7ados."
+        },
+        {
+            "marca": "Babolat",
+            "preco": 1700.0,
+            "quantidade": 5,
+            "descricao": "Raquete de t\u00eanis Babolat Pure Aero, para jogadores agressivos."
+        }
+    ],
+    "overgrips_tennis": [
+        {
+            "marca": "Wilson",
+            "preco": 30.0,
+            "quantidade": 100,
+            "descricao": "Overgrip Wilson Pro, para melhor ader\u00eancia e conforto."
+        },
+        {
+            "marca": "Head",
+            "preco": 35.0,
+            "quantidade": 80,
+            "descricao": "Overgrip Head HydroSorb, para uma pegada mais macia."
+        },
+        {
+            "marca": "Babolat",
+            "preco": 40.0,
+            "quantidade": 60,
+            "descricao": "Overgrip Babolat VS Grip, para uma sensa\u00e7\u00e3o de toque superior."
+        }
+    ],
+    "raqueteiras_tennis": [
+        {
+            "marca": "Wilson",
+            "preco": 400.0,
+            "quantidade": 20,
+            "descricao": "Raqueteira Wilson, para transporte seguro de raquetes."
+        },
+        {
+            "marca": "Head",
+            "preco": 450.0,
+            "quantidade": 15,
+            "descricao": "Raqueteira Head, para prote\u00e7\u00e3o e estilo."
+        },
+        {
+            "marca": "Babolat",
+            "preco": 500.0,
+            "quantidade": 10,
+            "descricao": "Raqueteira Babolat, para jogadores exigentes."
+        }
+    ]
+}
