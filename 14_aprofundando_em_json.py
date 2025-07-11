@@ -68,4 +68,25 @@ with open('dados_dev.json', 'r') as arquivo:
     dados_lidos = json.load(arquivo)
     print(dados_lidos)
 
-# 
+# Vamos aprender agora outras formas de manipular os dados JSON
+# Vamos criar uma função para adicionar uma nova habilidade
+def adicionar_habilidade(habilidade): # Aqui criamos uma função que recebe uma habilidade como parâmetro
+    dados_dev['habilidades'].append(habilidade) # Adiciona a nova habilidade à lista de habilidades
+    with open('dados_dev.json', 'w') as arquivo: # Salvando os dados atualizados no arquivo JSON
+        json.dump(dados_dev, arquivo, indent=4, ensure_ascii=False) # Atualiza o arquivo com os novos dados
+        # json.dump converte o dicionário em uma string JSON e escreve no arquivo
+
+# Percena que a estrutura segue amesma ideia da de dicionários e listas do proprio Python
+# Vamos adicionar uma nova habilidade
+adicionar_habilidade('Java') 
+# Podemos verificar novamente o conteúdo do arquivo para confirmar a atualização
+with open('dados_dev.json', 'r') as arquivo:
+    dados_lidos = json.load(arquivo)
+    print(dados_lidos)
+    # Verificando se a nova habilidade foi adicionada
+    if 'Java' in dados_lidos['habilidades']:
+        print("A habilidade 'Java' foi adicionada com sucesso!")
+    else:
+        print("A habilidade 'Java' não foi encontrada.")
+        print("Verifique se a habilidade foi adicionada corretamente.")
+    
