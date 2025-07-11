@@ -35,4 +35,34 @@ with open('dados.json', 'r') as arquivo:
 # O resultado deve ser: {'nome': 'João', 'idade': 30, 'cidade': 'São Paulo'}
 # Isso confirma que os dados foram salvos e lidos corretamente do arquivo JSON
 
+# Agora vamos manipular os dados lidos
+conteudo['idade'] += 1  # Incrementa a idade em 1
+# Salvando novamente os dados atualizados no arquivo JSON
+with open('dados.json', 'w') as arquivo:
+    json.dump(conteudo, arquivo)
+    # Atualiza o arquivo com os novos dados
+# Agora o arquivo dados.json contém os dados atualizados
+# Podemos verificar novamente o conteúdo do arquivo para confirmar a atualização    
+with open('dados.json', 'r') as arquivo:
+    conteudo = json.load(arquivo)
+    print(conteudo)
+    # Exibe o conteúdo atualizado do arquivo
+    # Se abrirmos o arquivo dados.json, veremos que a idade foi incrementada em 1
 
+# Vamos adicionar mais dados ao dicionário
+conteudo['profissao'] = 'Engenheiro'
+# Salvando novamente os dados atualizados no arquivo JSON
+with open('dados.json', 'w') as arquivo:
+    json.dump(conteudo, arquivo)
+    # Atualiza o arquivo com os novos dados
+# Agora o arquivo dados.json contém os dados atualizados
+# Podemos verificar novamente o conteúdo do arquivo para confirmar a atualização
+with open('dados.json', 'r') as arquivo:
+    conteudo = json.load(arquivo)
+    print(conteudo)
+    # Exibe o conteúdo atualizado do arquivo
+    # Se abrirmos o arquivo dados.json, veremos que a profissão foi adicionada
+# Isso demonstra como podemos salvar, ler e atualizar dados em um arquivo JSON de forma simples e eficiente
+# Agora temos um exemplo completo de como trabalhar com arquivos JSON em Python
+# Todas funções dos dicionários podem ser utilizadas normalmente e convertidas para JSON
+# Isso nos permite armazenar dados de forma estruturada e fácil de manipular e com sintaxe simples
