@@ -59,4 +59,11 @@ dados_dev['projetos'] = [
 
     # Salvando os dados atualizados no arquivo JSON
 with open('dados_dev.json', 'w') as arquivo:
-    json.dump(dados_dev, arquivo, indent=4, ensure_ascii=False)
+    json.dump(dados_dev, arquivo, indent=4, ensure_ascii=False) 
+    # Atualiza o arquivo com os novos dados
+    # Agora o arquivo dados_dev.json contém os dados atualizados
+    
+# Podemos verificar novamente o conteúdo do arquivo para confirmar a atualização
+with open('dados_dev.json', 'r') as arquivo:
+    dados_lidos = json.load(arquivo)
+    print(dados_lidos)
