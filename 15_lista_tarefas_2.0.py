@@ -43,9 +43,6 @@ def ver_tarefas():
 def sair_do_programa():
     print("Obrigado por usar a Lista de Tarefas. Até mais!")
 
-with open('tarefas.json', 'w') as arquivo:
-    json.dump(lista_tarefas, arquivo, indent=4)  # Salva a lista de tarefas no arquivo JSON
-
 while True:
     print("\nEscolha uma opção:")
     print("1- Adicionar tarefa")
