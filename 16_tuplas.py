@@ -26,4 +26,29 @@ print(lista_convidados)
 tupla_convidados = tuple(lista_convidados)
 print(tupla_convidados) # Observe que agora ele imprime as informações entre paranteses, indicando que é uma tupla
 
+# As tuplas são úteis quando queremos garantir que os dados não serão alterados acidentalmente
+# Vamos agora fazer o nosso usuário criar uma tupla com informções pessoais
 
+nome = input("Digite seu nome: ")
+idade = int(input("Digite sua idade: "))
+cidade = input("Digite sua cidade: ")
+tupla_usuario = (nome, idade, cidade) # Criando uma tupla com as informações do usuário
+print(f"Tupla do usuário: {tupla_usuario}") # Imprimindo a tupla do usuário
+
+# Caso queiramos que o usuario tenha a opção de adicionar mais uma tupla e colocar essas em uma lista, podemos fazer o seguinte:
+lista_usuarios = [] # Criando uma lista para armazenar as tuplas de usuários
+adicionar_usuario = 's' # Variável de controle para adicionar novos usuários
+
+while adicionar_usuario.lower() == 's':
+    nome = input("Digite seu nome: ")
+    idade = int(input("Digite sua idade: "))
+    cidade = input("Digite sua cidade: ")
+    tupla_usuario = (nome, idade, cidade) # Criando uma tupla com as informações do usuário
+    lista_usuarios.append(tupla_usuario) # Adicionando a tupla à lista
+    adicionar_usuario = input("Deseja adicionar outro usuário? (s/n): ")
+
+print("Lista de usuários:")
+for usuario in lista_usuarios:
+    print(usuario)
+# Aqui temos um exemplo de como criar uma lista de tuplas com informações de vários usuários
+# Isso é útil para armazenar dados de forma organizada e imutável
