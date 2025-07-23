@@ -31,7 +31,7 @@ print(metas_de_carreira)
 metas_de_carreira.append("Conseguir bons cerficados") # (.append) adiciona um novo item na lista citada antes do comando
 print(metas_de_carreira) # Observe que o item adicionado vai para o ultimo lugar da lista 
 
-# Vamos agora dicionara algo em uma posição específica da lista
+# Vamos agora adicionar algo em uma posição específica da lista
 metas_de_carreira.insert(0, "Entender a logica da programação") # Aqui adicionamos um item na posição 0 com (.insert)
 print(metas_de_carreira) # Observe que agora o novo item se encontra na posição que foi designada 
 
